@@ -15,6 +15,49 @@ The key objectives of this project are:
 3. **Optimize model for fast inference**: Apply quantization techniques to speed up inference while maintaining output quality.
 
 
+## Installation
+
+**Clone the Repository:**
+
+```
+git clone https://github.com/naqi72/Finetuning_TTS_Model
+cd Finetuning_TTS_Model
+```
+**Install Dependencies:** Install the required Python libraries from requirements.txt:
+```
+pip install -r requirements.txt
+```
+
+**Download Pre-Trained Model:** 
+```
+from transformers import SpeechT5ForTextToSpeech, SpeechT5Processor
+model = SpeechT5ForTextToSpeech.from_pretrained('your-model-checkpoint')
+processor = SpeechT5Processor.from_pretrained('your-model-checkpoint')
+```
+
+## Usage:
+
+**Using in Your Python Script:** You can directly use the model in a Python script to convert text to speech:
+```
+import torch
+from transformers import SpeechT5ForTextToSpeech, SpeechT5Processor
+
+# Load fine-tuned model and processor
+model = SpeechT5ForTextToSpeech.from_pretrained('your-model-checkpoint')
+processor = SpeechT5Processor.from_pretrained('your-model-checkpoint')
+
+# Example text input
+text_input = "Enter your text here."
+
+# Preprocess text and convert to speech
+inputs = processor(text_input, return_tensors="pt")
+with torch.no_grad():
+    speech = model.generate_speech(inputs["input_ids"])
+
+# Save the output as a .wav file
+torchaudio.save('output.wav', speech, 16000)
+```
+
 ## Task Breakdown
 
 ### 1. English TTS Fine-Tuning
