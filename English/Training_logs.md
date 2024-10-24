@@ -1,7 +1,10 @@
-library_name: transformers
-license: mit
-base_model: microsoft/speecht5_tts
-tags:
+**library_name:** transformers
+
+**license:** mit
+
+**base_model:** microsoft/speecht5_tts
+
+**tags:**
 - tts
 - generated_from_trainer
 datasets:
