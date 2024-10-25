@@ -10,10 +10,11 @@ Additionally, optimization techniques such as quantization are explored to impro
 
 ## Objectives
 The key objectives of this project are:
-1. **Fine-tune a TTS model for English technical terms**: Enhance the model's pronunciation of commonly used technical terms like "API," "CUDA,".
-2. **Fine-tune a TTS model for a regional language**: Improve the model's ability to synthesize high-quality, natural-sounding speech in a regional language.
-3. **Optimize model for fast inference**: Apply quantization techniques to speed up inference while maintaining output quality.
+1. **Fine-tune a TTS model for English technical terms**: Enhance the model's pronunciation of commonly used technical terms like "API," "CUDA,".The finetuned model is available here on Hugging Face: https://huggingface.co/naqi72/Finetune_English_SpeechT5
+ 
+2. **Fine-tune a TTS model for a regional language**: Improve the model's ability to synthesize high-quality, natural-sounding speech in a regional language.The finetuned model is available here on Hugging Face: https://huggingface.co/naqi72/Finetune_Hindi
 
+3. **Optimize model for fast inference**: Apply quantization techniques to speed up inference while maintaining output quality.
 
 ## Installation
 
